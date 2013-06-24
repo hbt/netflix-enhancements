@@ -1,0 +1,13 @@
+{
+  "name":             "Netflix Enhancement Suite", "description": "Bringing Vim's elegance to Chrome", "version": "1.0.0", "content_scripts": [
+  {
+    "run_at":  "document_start",
+    "js":      ["components/jquery/jquery.js", "components/underscore/underscore.js", "main.js"],
+    "matches": ["<all_urls>"]
+  }
+], "permissions":     ["tabs", "<all_urls>"],
+  "manifest_version": 2,
+  "background":       {
+    "page": "background/index.html"
+  }
+}
