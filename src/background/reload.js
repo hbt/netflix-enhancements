@@ -2,10 +2,10 @@
 var Extension = {
     version: null,
     // switch to 'dev' to enable reload on file changes
-    mode: 'dev'
+//    mode: 'dev'
+    mode: 'test'
 }
 
-var currentVersion
 function reloadExtension()
 {
     $.ajax('/version.txt?b=' + (+new Date())).done(function(txt) {
@@ -20,7 +20,7 @@ function reloadExtension()
     })
 }
 
-if(Extension.mode === 'dev')
+if(_.contains(['dev', 'test'], Extension.mode) && window.isBackgroundPage)
 {
     setInterval(reloadExtension, 500)
     chrome.tabs.reload()

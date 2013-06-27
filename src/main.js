@@ -48,6 +48,7 @@ var Netflix = (function()
         {
           var link = $(link)
           link.removeClass('playLink')
+          link.addClass('moviePageLink');
 
           // movie page instead of player
           var href = link.attr('href')
@@ -67,10 +68,24 @@ var Netflix = (function()
       // clear cache
       Cache.clear()
 
+
+      function initializeOrUpdate()
+      {
+        Posters.replaceUrls();
+      }
+
+      initializeOrUpdate()
+
+
+      // remove player hover in movie page
+      $('.displayPagePlayable').first().removeClass('displayPagePlayable')
+
+
       // watch dom
-      $(document).bind('DOMSubtreeModified',function(){
-        Posters.replaceUrls()
-      })
+      $(document).bind('DOMSubtreeModified', initializeOrUpdate)
+
+
+      MochaRunner.init()
     }
   }
 }())
