@@ -20,6 +20,8 @@
 
       "tests/runner.js",
 
+      "lib/cache.js",
+      "lib/posters.js",
       "main.js"
     ],
     "matches": ["<all_urls>"]

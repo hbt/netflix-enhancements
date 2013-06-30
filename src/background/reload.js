@@ -2,8 +2,8 @@
 var Extension = {
     version: null,
     // switch to 'dev' to enable reload on file changes
-//    mode: 'dev'
-    mode: 'test'
+    mode: 'dev'
+//    mode: 'test'
 }
 
 function reloadExtension()
