@@ -2,7 +2,13 @@
 var Extension = {
     version: null,
     // switch to 'dev' to enable reload on file changes
-    mode: 'dev'
+  /**
+   * modes:
+   * - prod : production
+   * - dev : reloads on changes
+   * - test : executes tests based on which page you're on
+   */
+    mode: 'prod'
 //    mode: 'test'
 }
 
