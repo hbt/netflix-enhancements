@@ -17,6 +17,9 @@ Netflix.init = function()
   Netflix.Filters.init()
 
 
+  // youtube
+  Netflix.Youtube.init()
+
   // tests
   MochaRunner.init()
 }
