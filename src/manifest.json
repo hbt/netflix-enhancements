@@ -22,6 +22,7 @@
 
       "lib/cache.js",
       "lib/posters.js",
+      "lib/filters.js",
       "main.js"
     ],
     "matches": ["<all_urls>"]

@@ -13,6 +13,10 @@ Netflix.init = function()
   $('.displayPagePlayable').first().removeClass('displayPagePlayable')
 
 
+  // boot filters
+  Netflix.Filters.init()
+
+
   // tests
   MochaRunner.init()
 }
