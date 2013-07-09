@@ -44,8 +44,6 @@ var Importer = {
           // need to import?
           if(nbMovies > _.keys(ratings).length)
           {
-            Importer.Updater.updateInProgress = true
-
             Importer.import()
           }
         }
@@ -211,11 +209,19 @@ var Importer = {
     }
   },
 
+  /**
+   * import triggered by updater
+   */
   import: function()
   {
-    this.Pagination.reset()
+    // avoid running more than one import at the time
+    if(!Importer.Updater.updateInProgress)
+    {
+      Importer.Updater.updateInProgress = true
 
-    Importer.Pagination.intervalId = window.setInterval(Importer.Pagination.importNextPage, Importer.Pagination.interval)
+      this.Pagination.reset()
+      Importer.Pagination.intervalId = window.setInterval(Importer.Pagination.importNextPage, Importer.Pagination.interval)
+    }
   },
 
   init: function()
