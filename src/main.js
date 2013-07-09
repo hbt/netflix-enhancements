@@ -16,6 +16,8 @@ Netflix.init = function()
   // boot filters
   Netflix.Filters.init()
 
+  // boot filters
+  Netflix.Ratings.init()
 
   // youtube
   Netflix.Youtube.init()

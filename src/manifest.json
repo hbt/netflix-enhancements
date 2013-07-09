@@ -23,6 +23,7 @@
       "lib/cache.js",
       "lib/posters.js",
       "lib/filters.js",
+      "lib/ratings.js",
       "lib/youtube.js",
       "main.js"
     ],
